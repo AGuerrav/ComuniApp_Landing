@@ -35,7 +35,9 @@
         
         <!-- Ballena -->
         <div class="hero__illu" aria-hidden="true">
-          <img src="Vistas/img/Whale.png" alt="Ballena Comuni" class="whale-float">
+          <div class="whale-container">
+            <img src="Vistas/img/Whale.png" alt="Ballena Comuni" class="whale-float">
+          </div>
         </div>
 
         <!-- Texto -->
@@ -53,23 +55,42 @@
     </section>
 
     <!-- 2) EL PROBLEMA -->
-    <section id="problema" class="section section--dark" aria-labelledby="t-problema">
-      <h2 id="t-problema" class="reveal">El problema</h2>
-      <p class="lead reveal">Nuestro entorno se desconecta… y eso nos afecta a todos.</p>
+    <!-- <section id="problema" class="section section--problem" aria-labelledby="t-problema">
+      <div class="problem-inner">
+        <h2 id="t-problema" class="reveal">El problema</h2>
 
-      <p class="muted reveal">
-        El deterioro ambiental y la pérdida de vínculo con la naturaleza afectan directamente a nuestras comunidades.
-        Comuni nace para recuperar esa relación y promover la acción colectiva.
-      </p>
+        <p class="lead reveal">
+          Nuestro entorno se desconecta… y eso nos afecta a todos.
+        </p>
 
-      <!-- Iceberg simbólico -->
-      <div class="iceberg reveal" aria-hidden="true">
-        <div class="mount left"></div>
-        <div class="mount right"></div>
+        <p class="muted reveal">
+          El deterioro ambiental y la pérdida de vínculo con la naturaleza afectan directamente a nuestras comunidades.
+          Comuni nace para recuperar esa relación y promover la acción colectiva.
+        </p>
+
+             
+        <div class="problem-illustration reveal"
+             role="img"
+             aria-label="Paisaje de bosque y montañas en acuarela">
+        </div>
       </div>
+    </section> -->
 
-      <div class="wave wave--up"></div>
-    </section>
+    <section class="problem-section">
+  <div class="problem-section__content">
+    <h2>El problema</h2>
+    <p class="problem-section__subtitle">Nuestro entorno se desconecta... y eso nos afecta a todos.</p>
+    
+    <div class="problem-iceberg-left"></div>
+    
+    <p class="problem-section__text">
+      El deterioro ambiental y la pérdida de vínculo con la naturaleza afectan directamente a nuestras comunidades. Comuni nace para recuperar esa relación y promover la acción colectiva.
+    </p>
+    
+    <div class="problem-iceberg-right"></div>
+  </div>
+</section>
+    
 
     <!-- 3) LA SOLUCIÓN -->
     <section id="solucion" class="section" aria-labelledby="t-solucion">
