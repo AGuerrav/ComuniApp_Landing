@@ -114,3 +114,44 @@
     margin-top: 20px;
   }
 }
+
+@media (max-width: 600px) {
+  .solution-section {
+    padding: 80px 16px;
+  }
+
+  .solution-title {
+    font-size: 2rem;
+  }
+
+  .solution-body {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .solution-section {
+    padding: 70px 16px;
+  }
+
+  .solution-title {
+    font-size: 1.8rem;
+  }
+
+  .solution-body {
+    font-size: 0.9rem;
+  }
+
+  .solution-list {
+    font-size: 0.9rem;
+  }
+
+  .phone-frame {
+    width: 240px;
+    padding: 14px;
+  }
+
+  .app-slideshow {
+    height: 350px;
+  }
+}

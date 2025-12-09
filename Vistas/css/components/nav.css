@@ -21,3 +21,27 @@
 .nav a:hover {
   color: #0f2222;
 }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav {
+    gap: 14px;
+    padding: 8px 12px;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+    padding: 6px 10px;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}

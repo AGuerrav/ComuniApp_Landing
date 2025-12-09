@@ -95,3 +95,35 @@
     animation: floatIsland 11s ease-in-out infinite alternate;
   }
 }
+
+@media (max-width: 600px) {
+  .problem-sides {
+    padding: 80px 16px 100px;
+  }
+
+  .problem-inner .problem-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .problem-sides {
+    padding: 70px 16px 80px;
+  }
+
+  .problem-inner {
+    max-width: 90%;
+  }
+
+  .problem-inner .problem-title {
+    font-size: 1.5rem;
+  }
+
+  .problem-inner .problem-text {
+    font-size: 0.9rem;
+  }
+
+  .problem-inner .kicker {
+    font-size: 0.8rem;
+  }
+}
