@@ -5,18 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Comuni – Conecta con tu entorno</title>
-
-    <!-- CSS principal -->
     <link rel="stylesheet" href="Vistas/css/main.css">
-
-    <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ENCABEZADO GLOBAL -->
+    <!-- Menu -->
     <header class="site-header">
         <nav class="nav" aria-label="Navegación principal">
             <a href="#inicio">Inicio</a>
@@ -29,19 +25,14 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
-
-        <!-- 1) HOME / HERO -->
+        <!-- 1) INICIO-->
         <section id="inicio" class="hero" aria-labelledby="t-inicio">
             <div class="hero__inner">
-
-                <!-- Ballena -->
                 <div class="hero__illu" aria-hidden="true">
                     <div class="whale-container">
                         <img src="Vistas/img/Whale.png" alt="Ballena Comuni" class="whale-float">
                     </div>
                 </div>
-
-                <!-- Texto -->
                 <div class="hero__copy reveal">
                     <h1 id="t-inicio">Conectamos personas y naturaleza</h1>
                     <p>Una comunidad que cuida su entorno local.</p>
@@ -49,10 +40,6 @@
                 </div>
 
             </div>
-
-            <!-- Olas -->
-            <div class="wave"></div>
-            <div class="wave wave--layer"></div>
         </section>
 
         <!-- 2) EL PROBLEMA -->
@@ -72,8 +59,6 @@
                     Comuni nace para recuperar esa relación y promover la acción colectiva.
                 </p>
             </div>
-
-            <!-- “Icebergs” de bosque a cada lado -->
             <div class="problem-iceberg problem-iceberg--left" aria-hidden="true"></div>
             <div class="problem-iceberg problem-iceberg--right" aria-hidden="true"></div>
 
@@ -109,7 +94,6 @@
                     <a href="#contacto" class="btn btn--primary">Únete a la comunidad</a>
                 </div>
 
-                <!-- Mockup del app (imagen acuarelada estilo tarjeta móvil) -->
                 <div class="solution-visual">
                     <div class="phone-frame">
                         <div class="app-slideshow">
@@ -147,7 +131,6 @@
                 <!-- Grid de comunidades -->
                 <div class="community-grid">
 
-                    <!-- Card 1 -->
                     <article class="community-card">
                         <figure class="community-thumb">
                             <img src="Vistas/img/comunidad-playa.jpg" alt="Grupo limpiando una playa">
@@ -165,8 +148,6 @@
                             </ul>
                         </div>
                     </article>
-
-                    <!-- Card 2 -->
                     <article class="community-card">
                         <figure class="community-thumb">
                             <img src="Vistas/img/comunidad-huerto.jpg"
@@ -186,8 +167,6 @@
                             </ul>
                         </div>
                     </article>
-
-                    <!-- Card 3 -->
                     <article class="community-card">
                         <figure class="community-thumb">
                             <img src="Vistas/img/comunidad-escuela.jpg"
@@ -209,8 +188,6 @@
                     </article>
 
                 </div>
-
-                <!-- Métricas globales -->
                 <div class="community-metrics">
                     <div class="metric-pill">
                         <span class="metric-number">20+</span>
@@ -225,8 +202,6 @@
                         <span class="metric-label">avistamientos de flora y fauna</span>
                     </div>
                 </div>
-
-                <!-- CTA -->
                 <div class="community-cta">
                     <p>¿Te gustaría impulsar una iniciativa en tu zona?</p>
                     <a href="#contacto" class="btn btn--primary">Quiero participar</a>
@@ -249,8 +224,6 @@
                 </header>
 
                 <div class="contact-layout">
-
-                    <!-- Columna texto -->
                     <div class="contact-copy">
                         <h3>Conversemos</h3>
                         <p>
@@ -264,36 +237,27 @@
                             <li>Explorar ideas para proyectos ambientales locales.</li>
                         </ul>
                     </div>
-
-                    <!-- Formulario de contacto -->
                     <div class="contact-form-wrap">
                         <form id="contact-form" novalidate>
-                            <!-- Nombre -->
                             <div class="form-field">
                                 <label for="nombre">Nombre completo<span class="required">*</span></label>
-                                <input type="text" id="nombre" name="nombre" autocomplete="name" required maxlength="60">
+                                <input type="text" id="nombre" name="nombre" autocomplete="name" required
+                                    maxlength="60">
                                 <p class="field-error" aria-live="polite"></p>
                             </div>
-
-                            <!-- Email -->
                             <div class="form-field">
                                 <label for="email">Correo electrónico<span class="required">*</span></label>
-                                <input type="email" id="email" name="email" autocomplete="email" required maxlength="80">
+                                <input type="email" id="email" name="email" autocomplete="email" required
+                                    maxlength="80">
                                 <p class="field-error" aria-live="polite"></p>
                             </div>
-
-                            <!-- Teléfono -->
                             <div class="form-field">
                                 <label for="telefono">Teléfono de contacto<span class="required">*</span></label>
                                 <input type="tel" id="telefono" name="telefono" autocomplete="tel"
                                     placeholder="+569XXXXXXXX" required maxlength="12">
                                 <p class="field-error" aria-live="polite"></p>
                             </div>
-
-                            <!-- Mensaje de éxito -->
                             <p id="contact-success" class="form-success" aria-live="polite"></p>
-
-                            <!-- Botón -->
                             <button type="submit" class="btn btn--primary">
                                 Enviar
                             </button>
@@ -303,13 +267,9 @@
                             +569XXXXXXXX.
                         </p>
                     </div>
-
-
                 </div>
             </div>
         </section>
-
-
     </main>
 
     <!-- PIE DE PÁGINA -->
