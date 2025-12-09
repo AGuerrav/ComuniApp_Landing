@@ -26,14 +26,14 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main>
         <!-- 1) INICIO-->
-        <section id="inicio" class="hero" aria-labelledby="t-inicio">
-            <div class="hero__inner">
-                <div class="hero__illu" aria-hidden="true">
+        <section id="inicio" class="hero-section" aria-labelledby="t-inicio">
+            <div class="hero-inner">
+                <div class="hero-illu" aria-hidden="true">
                     <div class="whale-container">
                         <img src="Vistas/img/Whale.png" alt="Ballena Comuni" class="whale-float">
                     </div>
                 </div>
-                <div class="hero__copy reveal">
+                <div class="hero-copy reveal">
                     <h1 id="t-inicio">Conectamos personas y naturaleza</h1>
                     <p>Una comunidad que cuida su entorno local.</p>
                     <a class="btn btn--primary" href="#problema">Conoce más</a>
@@ -43,7 +43,7 @@
         </section>
 
         <!-- 2) EL PROBLEMA -->
-        <section id="problema" class="problem-sides" aria-labelledby="t-problema">
+        <section id="problema" class="problem-section" aria-labelledby="t-problema">
 
             <div class="problem-inner">
                 <p class="kicker">El problema</p>
