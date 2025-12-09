@@ -1,0 +1,196 @@
+/* Sección Comunidad */
+.community-section {
+  position: relative;
+  padding: 120px 20px 100px;
+  background: #f6fbfc;
+  color: #243234;
+  overflow: hidden;
+}
+
+/* Toque acuarela de fondo muy suave */
+.community-section::before {
+  content: "";
+  position: absolute;
+  inset: -80px;
+  background: radial-gradient(
+      circle at 10% 0%,
+      rgba(151, 222, 242, 0.35) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 90% 100%,
+      rgba(171, 233, 205, 0.3) 0,
+      transparent 55%
+    );
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.community-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.community-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+
+.community-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1e2b2d;
+}
+
+.community-subtitle {
+  font-size: 1.05rem;
+  color: #556b6f;
+}
+
+/* Grid de cards */
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.community-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(167, 224, 214, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.community-thumb {
+  margin: 0;
+  overflow: hidden;
+}
+
+.community-thumb img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.community-body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.community-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #21a3a6;
+  margin: 0;
+}
+
+.community-description {
+  font-size: 0.96rem;
+  color: #4a5b5f;
+}
+
+/* Stats dentro de la card */
+.community-stats {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: #607579;
+}
+
+.community-stats li {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-weight: 700;
+  color: #202f33;
+}
+
+/* Métricas globales */
+.community-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.metric-pill {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  padding: 10px 18px;
+  border: 1px solid rgba(196, 225, 220, 0.8);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.metric-number {
+  font-weight: 700;
+  color: #1c9c94;
+}
+
+.metric-label {
+  color: #4c5f62;
+}
+
+.community-cta {
+  text-align: center;
+  font-size: 1rem;
+  color: #36484b;
+}
+
+.community-cta p {
+  margin-bottom: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .community-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .community-section {
+    padding: 80px 16px 70px;
+  }
+
+  .community-title {
+    font-size: 1.9rem;
+  }
+
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .community-thumb img {
+    height: 200px;
+  }
+
+  .community-metrics {
+    gap: 10px;
+  }
+
+  .metric-pill {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,151 @@
+/* Sección Contacto / Próximamente */
+.contact-section {
+  position: relative;
+  padding: 110px 20px 90px;
+  background: linear-gradient(180deg, #f6fbfc 0%, #e5f5f7 35%, #f7fbff 100%);
+  color: #203034;
+}
+
+.contact-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+.contact-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-size: 1.02rem;
+  color: #51646a;
+}
+
+/* Layout columnas */
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: flex-start;
+}
+
+.contact-copy h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.contact-copy p {
+  margin-bottom: 12px;
+  color: #4b5d60;
+}
+
+.contact-copy ul {
+  padding-left: 20px;
+  margin: 0;
+  color: #4c5f63;
+}
+
+.contact-copy li {
+  margin-bottom: 6px;
+}
+
+/* Formulario */
+.contact-form-wrap {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+  padding: 22px 22px 24px;
+  border: 1px solid rgba(180, 226, 224, 0.8);
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #32454a;
+}
+
+.required {
+  color: #e54848;
+  margin-left: 2px;
+}
+
+.form-field input {
+  border-radius: 12px;
+  border: 1px solid #d2e4e7;
+  padding: 9px 11px;
+  font: inherit;
+  outline: none;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.form-field input:focus {
+  border-color: #35b5b8;
+  box-shadow: 0 0 0 2px rgba(53, 181, 184, 0.15);
+  background: #fbffff;
+}
+
+/* Errores y éxito */
+.field-error {
+  min-height: 16px;
+  font-size: 0.8rem;
+  color: #e54848;
+  margin-top: 3px;
+}
+
+.form-field.has-error input {
+  border-color: #e54848;
+  box-shadow: 0 0 0 2px rgba(229, 72, 72, 0.12);
+}
+
+.form-success {
+  font-size: 0.9rem;
+  color: #218c74;
+  margin: 4px 0 6px;
+}
+
+.contact-note {
+  font-size: 0.85rem;
+  color: #6a7c80;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-wrap {
+    order: -1; /* formulario arriba en mobile */
+  }
+
+  .contact-section {
+    padding: 80px 16px 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-title {
+    font-size: 1.9rem;
+  }
+}

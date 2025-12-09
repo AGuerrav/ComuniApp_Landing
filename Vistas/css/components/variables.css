@@ -1,0 +1,27 @@
+/* Variables de color y estilos globales */
+:root {
+  --bg: #f7f9fb;
+  --text: #2f3a3a;
+  --muted: #6b7a7a;
+  --mint: #aee1d5;
+  --aqua: #cfe8f3;
+  --dark: #2f3f46;
+  --soft: #eef5f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
