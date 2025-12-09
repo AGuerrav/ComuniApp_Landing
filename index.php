@@ -236,27 +236,79 @@
         </section>
 
 
-        <!-- 5) CONTACTO -->
-        <section id="contacto" class="section section--cta" aria-labelledby="t-contacto">
-            <h2 id="t-contacto" class="reveal">¿Quieres ser parte de Comuni?</h2>
-            <p class="lead reveal">Déjanos tu correo y sé parte del lanzamiento.</p>
+        <!-- 5) CONTACTO / PRÓXIMAMENTE -->
+        <section id="contacto" class="contact-section" aria-labelledby="t-contacto">
+            <div class="contact-inner">
 
-            <form class="form reveal" method="post" novalidate>
-                <label class="sr-only" for="f-nombre">Nombre</label>
-                <input id="f-nombre" name="nombre" type="text" placeholder="Nombre" required>
+                <header class="contact-header">
+                    <p class="kicker">Próximamente</p>
+                    <h2 id="t-contacto" class="contact-title">¿Quieres ser parte de Comuni?</h2>
+                    <p class="contact-subtitle">
+                        Déjanos tus datos y te contactaremos cuando la app esté disponible.
+                    </p>
+                </header>
 
-                <label class="sr-only" for="f-email">Correo electrónico</label>
-                <input id="f-email" name="email" type="email" placeholder="Correo electrónico" required>
+                <div class="contact-layout">
 
-                <button class="btn btn--primary" type="submit">Próximamente</button>
-            </form>
+                    <!-- Columna texto -->
+                    <div class="contact-copy">
+                        <h3>Conversemos</h3>
+                        <p>
+                            Si te interesa unirte a una comunidad, crear una nueva iniciativa o recibir noticias del
+                            lanzamiento,
+                            completa tus datos y te escribiremos pronto.
+                        </p>
+                        <ul>
+                            <li>Conectarte con personas que cuidan su entorno.</li>
+                            <li>Recibir novedades sobre el lanzamiento de Comuni.</li>
+                            <li>Explorar ideas para proyectos ambientales locales.</li>
+                        </ul>
+                    </div>
 
-            <div class="social reveal">
-                <span class="ico" aria-label="Twitter"></span>
-                <span class="ico" aria-label="Facebook"></span>
-                <span class="ico" aria-label="Instagram"></span>
+                    <!-- Formulario de contacto -->
+                    <div class="contact-form-wrap">
+                        <form id="contact-form" novalidate>
+                            <!-- Nombre -->
+                            <div class="form-field">
+                                <label for="nombre">Nombre completo<span class="required">*</span></label>
+                                <input type="text" id="nombre" name="nombre" autocomplete="name" required maxlength="60">
+                                <p class="field-error" aria-live="polite"></p>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-field">
+                                <label for="email">Correo electrónico<span class="required">*</span></label>
+                                <input type="email" id="email" name="email" autocomplete="email" required maxlength="80">
+                                <p class="field-error" aria-live="polite"></p>
+                            </div>
+
+                            <!-- Teléfono -->
+                            <div class="form-field">
+                                <label for="telefono">Teléfono de contacto<span class="required">*</span></label>
+                                <input type="tel" id="telefono" name="telefono" autocomplete="tel"
+                                    placeholder="+569XXXXXXXX" required maxlength="12">
+                                <p class="field-error" aria-live="polite"></p>
+                            </div>
+
+                            <!-- Mensaje de éxito -->
+                            <p id="contact-success" class="form-success" aria-live="polite"></p>
+
+                            <!-- Botón -->
+                            <button type="submit" class="btn btn--primary">
+                                Enviar
+                            </button>
+                        </form>
+                        <p class="contact-note">
+                            Por ahora Comuni estará disponible solo en Chile. El teléfono debe ser chileno en formato
+                            +569XXXXXXXX.
+                        </p>
+                    </div>
+
+
+                </div>
             </div>
         </section>
+
 
     </main>
 
