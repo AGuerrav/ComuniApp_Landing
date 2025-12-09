@@ -279,6 +279,7 @@
 
     <!-- JS - Componentes -->
     <script src="Vistas/js/components/navigation.js"></script>
+    <script src="Vistas/js/components/sticky-nav.js"></script>
     <script src="Vistas/js/components/scroll-reveal.js"></script>
     <script src="Vistas/js/components/slideshow.js"></script>
     <script src="Vistas/js/components/form-validation.js"></script>

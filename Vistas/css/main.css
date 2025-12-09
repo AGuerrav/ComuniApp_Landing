@@ -4,6 +4,7 @@
 @import url("components/variables.css");
 
 /* Componentes */
+@import url("components/animations.css");
 @import url("components/buttons.css");
 @import url("components/nav.css");
 @import url("components/hero.css");

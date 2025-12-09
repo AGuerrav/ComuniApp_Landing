@@ -1,0 +1,127 @@
+/* Animaciones de carga para secciones */
+
+/* Fade-in + slide-up suave para secciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in puro para elementos */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scale + fade para elementos destacados */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Aplicar animación a secciones principales */
+.hero-section,
+.problem-section,
+.solution-section,
+.community-section,
+.contact-section {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Diferentes delays para efecto en cascada */
+.hero-section {
+  animation-delay: 0.1s;
+}
+
+.problem-section {
+  animation-delay: 0.2s;
+}
+
+.solution-section {
+  animation-delay: 0.2s;
+}
+
+.community-section {
+  animation-delay: 0.2s;
+}
+
+.contact-section {
+  animation-delay: 0.2s;
+}
+
+/* Animación para elementos dentro de las secciones */
+.community-card {
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.community-card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.community-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.community-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+/* Animación para botones */
+.btn {
+  transition: all 0.3s ease;
+}
+
+/* Animación para inputs del formulario */
+.form-field input {
+  transition: all 0.3s ease;
+}
+
+.form-field input:focus {
+  animation: scaleIn 0.3s ease-out;
+}
+
+/* Mejorar transición de reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación sutil para imágenes */
+img {
+  transition: opacity 0.3s ease;
+}
+
+/* Transiciones para navegación */
+.nav a {
+  transition: color 0.3s ease;
+}
+
+/* Transición suave para el footer */
+.site-footer {
+  animation: fadeIn 1s ease-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: backwards;
+}
