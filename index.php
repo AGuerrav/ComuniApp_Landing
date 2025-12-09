@@ -129,34 +129,112 @@
 
         </section>
 
-
         <!-- 4) COMUNIDAD -->
-        <section id="comunidad" class="section" aria-labelledby="t-comunidad">
-            <h2 id="t-comunidad" class="reveal">Comunidad</h2>
+        <section id="comunidad" class="community-section" aria-labelledby="t-comunidad">
+            <div class="community-inner">
 
-            <div class="cards reveal">
-                <article class="card">
-                    <div class="card__thumb"></div>
-                    <h3>Humedales de Barrio</h3>
-                    <p class="muted">Monitoreo de flora y aves en humedales urbanos.</p>
-                    <a class="btn btn--ghost" href="#">Ver más historias</a>
-                </article>
+                <header class="community-header">
+                    <p class="kicker">Comunidad</p>
+                    <h2 id="t-comunidad" class="community-title">
+                        Comunidades que ya están cuidando su entorno
+                    </h2>
+                    <p class="community-subtitle">
+                        Personas, colegios y organizaciones se conectan a través de Comuni para
+                        organizar acciones ambientales y compartir lo que ocurre en su territorio.
+                    </p>
+                </header>
 
-                <article class="card">
-                    <div class="card__thumb"></div>
-                    <h3>Reforestación Local</h3>
-                    <p class="muted">Plantación de árboles nativos junto a la comunidad.</p>
-                    <a class="btn btn--ghost" href="#">Ver más historias</a>
-                </article>
+                <!-- Grid de comunidades -->
+                <div class="community-grid">
 
-                <article class="card">
-                    <div class="card__thumb"></div>
-                    <h3>Costa Viva</h3>
-                    <p class="muted">Limpieza de playas y registro de residuos.</p>
-                    <a class="btn btn--ghost" href="#">Ver más historias</a>
-                </article>
+                    <!-- Card 1 -->
+                    <article class="community-card">
+                        <figure class="community-thumb">
+                            <img src="Vistas/img/comunidad-playa.jpg" alt="Grupo limpiando una playa">
+                        </figure>
+                        <div class="community-body">
+                            <h3 class="community-name">Comunidad Las Higueras</h3>
+                            <p class="community-description">
+                                Vecinos y voluntarios coordinan jornadas de limpieza de playas y registro de residuos
+                                para proteger la costa local.
+                            </p>
+                            <ul class="community-stats">
+                                <li><span class="stat-number">45</span><span class="stat-label">miembros</span></li>
+                                <li><span class="stat-number">12</span><span class="stat-label">eventos</span></li>
+                                <li><span class="stat-number">4</span><span class="stat-label">avistamientos</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="community-card">
+                        <figure class="community-thumb">
+                            <img src="Vistas/img/comunidad-huerto.jpg"
+                                alt="Personas trabajando en un huerto comunitario">
+                        </figure>
+                        <div class="community-body">
+                            <h3 class="community-name">Huerto Barrio Norte</h3>
+                            <p class="community-description">
+                                Familias del barrio se organizan para cuidar un huerto urbano,
+                                promover compostaje y compartir cosechas.
+                            </p>
+                            <ul class="community-stats">
+                                <li><span class="stat-number">32</span><span class="stat-label">miembros</span></li>
+                                <li><span class="stat-number">8</span><span class="stat-label">eventos</span></li>
+                                <li><span class="stat-number">15</span><span class="stat-label">avistamientos</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="community-card">
+                        <figure class="community-thumb">
+                            <img src="Vistas/img/comunidad-escuela.jpg"
+                                alt="Estudiantes participando en actividad ecológica">
+                        </figure>
+                        <div class="community-body">
+                            <h3 class="community-name">Red de Escuelas Verdes</h3>
+                            <p class="community-description">
+                                Estudiantes y docentes registran fauna local, diseñan actividades y conectan proyectos
+                                ambientales entre colegios.
+                            </p>
+                            <ul class="community-stats">
+                                <li><span class="stat-number">18</span><span class="stat-label">comunidades</span></li>
+                                <li><span class="stat-number">25</span><span class="stat-label">eventos</span></li>
+                                <li><span class="stat-number">60+</span><span class="stat-label">avistamientos</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Métricas globales -->
+                <div class="community-metrics">
+                    <div class="metric-pill">
+                        <span class="metric-number">20+</span>
+                        <span class="metric-label">comunidades organizadas</span>
+                    </div>
+                    <div class="metric-pill">
+                        <span class="metric-number">100+</span>
+                        <span class="metric-label">eventos registrados</span>
+                    </div>
+                    <div class="metric-pill">
+                        <span class="metric-number">200+</span>
+                        <span class="metric-label">avistamientos de flora y fauna</span>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="community-cta">
+                    <p>¿Te gustaría impulsar una iniciativa en tu zona?</p>
+                    <a href="#contacto" class="btn btn--primary">Quiero participar</a>
+                </div>
+
             </div>
         </section>
+
 
         <!-- 5) CONTACTO -->
         <section id="contacto" class="section section--cta" aria-labelledby="t-contacto">
