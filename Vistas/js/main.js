@@ -82,3 +82,16 @@ if (form) {
     }
   });
 }
+
+// --- Slideshow automático para mockup ---
+const slides = document.querySelectorAll('.app-slideshow .slide');
+let current = 0;
+
+function rotateSlides(){
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}
+
+setInterval(rotateSlides, 3000); // cambia cada 3 segundos
+

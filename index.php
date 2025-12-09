@@ -82,27 +82,53 @@
 
 
         <!-- 3) LA SOLUCIÓN -->
-        <section id="solucion" class="section" aria-labelledby="t-solucion">
-            <h2 id="t-solucion" class="reveal">La solución</h2>
+        <section id="solucion" class="solution-section" aria-labelledby="t-solucion">
 
-            <div class="grid-2 reveal">
-                <div>
-                    <p>
-                        Comuni ayuda a reconectar personas con su entorno, facilitando la observación de la naturaleza y
-                        la organización de iniciativas locales.
+            <div class="solution-inner">
+
+                <div class="solution-text">
+                    <p class="kicker">La solución</p>
+
+                    <h2 id="t-solucion" class="solution-title">
+                        Comuni reconecta personas<br>
+                        con la naturaleza y su comunidad.
+                    </h2>
+
+                    <p class="solution-body">
+                        A través de observaciones, actividades colaborativas y contenido creado por la comunidad,
+                        Comuni facilita que cualquier persona pueda cuidar su entorno local y formar parte de
+                        iniciativas significativas.
                     </p>
-                    <ul class="list">
-                        <li>Comparte observaciones de tu entorno.</li>
-                        <li>Descubre eventos y actividades comunitarias.</li>
-                        <li>Inspírate con historias reales.</li>
+
+                    <ul class="solution-list">
+                        <li>Registra avistamientos de fauna y flora.</li>
+                        <li>Descubre eventos ecológicos en tu zona.</li>
+                        <li>Conéctate con comunidades y proyectos reales.</li>
                     </ul>
+
+                    <a href="#contacto" class="btn btn--primary">Únete a la comunidad</a>
                 </div>
 
-                <div class="phone-mock"></div>
+                <!-- Mockup del app (imagen acuarelada estilo tarjeta móvil) -->
+                <div class="solution-visual">
+                    <div class="phone-frame">
+                        <div class="app-slideshow">
+
+                            <img src="Vistas/img/app1.png" class="slide active">
+                            <img src="Vistas/img/app2.png" class="slide">
+                            <img src="Vistas/img/app3.png" class="slide">
+                            <img src="Vistas/img/app4.png" class="slide">
+                            <img src="Vistas/img/app5.png" class="slide">
+
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
-            <a class="btn btn--primary reveal" href="#contacto">Únete a la comunidad</a>
         </section>
+
 
         <!-- 4) COMUNIDAD -->
         <section id="comunidad" class="section" aria-labelledby="t-comunidad">
