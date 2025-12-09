@@ -94,7 +94,7 @@ body {
 
 /* -------- BALLENA FLOTANTE -------- */
 .whale-container {
-  width: 260px;
+  width: 70%;
   max-width: 90%;
   margin: 0 auto 30px;
   position: relative;
