@@ -194,60 +194,117 @@ body{
 
 
 
-/* ----------- SECCIÓN EL PROBLEMA (estilo Sift) ----------- */
-/* .section--problem{
-  position:relative;
-  padding:96px 20px 80px;
-  background:#28354a;
-  color:#fff;
+/* =========================================
+   SECCIÓN EL PROBLEMA – ESTILO SIFT
+========================================= */
+
+.problem-sides{
+  position: relative;
+  padding: 120px 20px 160px;
+  background: #28354a;              /* azul petróleo */
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;                  /* para que los bosques puedan “salirse” por abajo */
 }
 
-.section--problem .problem-inner{
-  max-width:900px;
-  margin:0 auto;
-  text-align:center;
+/* Bloque de texto centrado */
+.problem-inner{
+  position: relative;
+  z-index: 2;                        /* por encima de las imágenes laterales */
+  max-width: 50%;
+  margin: 0 auto;
 }
 
-.section--problem h2{
-  font-size:1.8rem;
-  margin-bottom:12px;
+.problem-inner .kicker{
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #96d6f2;                    /* celeste de tu paleta */
+  margin-bottom: 12px;
 }
 
-.section--problem .lead{
-  font-size:1.2rem;
-  margin-bottom:16px;
+.problem-inner .problem-title{
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 18px;
+  color: #e9f4f5;
 }
 
-.section--problem .muted{
-  color:#dde5e7;
-  margin-bottom:32px;
+.problem-inner .problem-text{
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #cbd9dd;
 }
 
-.problem-illustration{
-  height:260px;
-  border-radius:32px 32px 0 0;
-  background:
-    linear-gradient(180deg, rgba(9,16,28,0.1), rgba(9,16,28,0.75)),
-    url("../img/Forest.png") center bottom / cover no-repeat;
-  box-shadow:0 -18px 40px rgba(0,0,0,0.45);
-  position:relative;
-  overflow:hidden;
-} */
+/* Bosques laterales (“icebergs”) */
+.problem-iceberg{
+  position: absolute;
+  bottom: -0px;                     /* sobresalen del bloque azul hacia abajo */
+  width: 460px;
+  height: 85%;
+  background: url("../img/ForestIsland.png") center bottom / contain no-repeat;
+  filter: drop-shadow(0 28px 50px rgba(0,0,0,0.45));
+  opacity: 0.98;
+  z-index: 1;
+  animation: floatIsland 11s ease-in-out infinite alternate;
+}
 
-   /* pequeña “línea de horizonte” semitransparente como en el iceberg */
-/* .problem-illustration::after{
-  content:"";
-  position:absolute;
-  left:0;right:0;
-  top:52%;
-  height:1px;
-  background:linear-gradient(90deg, transparent, rgba(199,236,244,0.5), transparent);
-  opacity:.6;
-} */
+/* Izquierda */
+.problem-iceberg--left{
+  left: -50px;
+}
+
+/* Derecha (espejada) */
+.problem-iceberg--right{
+  right: -50px;
+  transform: scaleX(-1);
+}
+
+/* Animación suave de flotación */
+@keyframes floatIsland{
+  0%   { transform: translateY(0) scaleX(1); }
+  100% { transform: translateY(-14px) scaleX(1); }
+}
+
+/* =========================================
+   RESPONSIVE – EL PROBLEMA
+========================================= */
+
+@media (max-width: 900px){
+
+  /* Reducir un poco el título */
+  .problem-inner .problem-title{
+    font-size: 1.9rem;
+  }
+
+  /* Ocultar bosques laterales */
+  .problem-iceberg{
+    display: none;
+  }
+
+  /* Mostrar un bosque único centrado debajo del texto */
+  .problem-sides::after{
+    content: "";
+    display: block;
+    margin: 32px auto 0;
+    width: 80%;
+    max-width: 360px;
+    height: 0;
+    padding-bottom: 70%;  /* proporción aproximada de la imagen */
+    background: url("../img/ForestIsland.png") center bottom / contain no-repeat;
+    filter: drop-shadow(0 25px 40px rgba(0,0,0,0.45));
+    animation: floatIsland 11s ease-in-out infinite alternate;
+  }
+}
+
+
 
 /* ---------- EL PROBLEMA ---------- */
 /* ---------- EL PROBLEMA ---------- */
-.problem-section {
+/* .problem-section {
   background: #3d4f57;
   color: #fff;
   padding: 60px 20px;
@@ -303,10 +360,10 @@ body{
   border-radius: 0;
   position: relative;
   transform: scaleX(-1);
-}
+} */
 
 /* ---------- RESPONSIVE ---------- */
-@media(max-width:900px){
+/* @media(max-width:900px){
   .problem-section__content {
     grid-template-columns: 1fr;
   }
@@ -317,7 +374,7 @@ body{
   .problem-iceberg-right {
     height: 200px;
   }
-}
+} */
 
 
 /* ---------- SOLUCIÓN ---------- */
