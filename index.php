@@ -1,3 +1,12 @@
+<?php
+require_once __DIR__ . '/Config/conexion.php';
+require_once __DIR__ . '/Modelo/ComunidadModel.php';
+require_once __DIR__ . '/Controlador/ComunidadController.php';
+
+$controller = new ComunidadController();
+$comunidades = $controller->listar(); // devuelve un array de comunidades
+?>
+
 <!doctype html>
 <html lang="es">
 
@@ -130,64 +139,54 @@
 
                 <!-- Grid de comunidades -->
                 <div class="community-grid">
+                    <?php if (!empty($comunidades)): ?>
+                        <?php foreach ($comunidades as $c): ?>
+                        <?php
+                            $id = (int)($c['id'] ?? 0);
+                            $nombre = htmlspecialchars($c['nombre'] ?? '', ENT_QUOTES, 'UTF-8');
+                            $descripcion = htmlspecialchars($c['descripcion'] ?? '', ENT_QUOTES, 'UTF-8');
+
+                            // En BD guardaste "img/archivo.jpg" => en web queda "Vistas/img/archivo.jpg"
+                            $imgRel = $c['imagen'] ?? '';
+                            $imgSrc = 'Vistas/' . ltrim($imgRel, '/');
+
+                            $miembros = (int)($c['miembros'] ?? 0);
+                            $eventos = (int)($c['eventos'] ?? 0);
+                            $avistamientos = (int)($c['avistamientos'] ?? 0);
+                        ?>
 
                     <article class="community-card">
                         <figure class="community-thumb">
-                            <img src="Vistas/img/comunidad-playa.jpg" alt="Grupo limpiando una playa">
+                        <img src="<?php echo htmlspecialchars($imgSrc, ENT_QUOTES, 'UTF-8'); ?>"
+                            alt="<?php echo $nombre; ?>">
                         </figure>
+
                         <div class="community-body">
-                            <h3 class="community-name">Comunidad Las Higueras</h3>
-                            <p class="community-description">
-                                Vecinos y voluntarios coordinan jornadas de limpieza de playas y registro de residuos
-                                para proteger la costa local.
-                            </p>
-                            <ul class="community-stats">
-                                <li><span class="stat-number">45</span><span class="stat-label">miembros</span></li>
-                                <li><span class="stat-number">12</span><span class="stat-label">eventos</span></li>
-                                <li><span class="stat-number">4</span><span class="stat-label">avistamientos</span></li>
-                            </ul>
+                        <h3 class="community-name"><?php echo $nombre; ?></h3>
+                        <p class="community-description"><?php echo $descripcion; ?></p>
+
+                        <ul class="community-stats">
+                            <li><span class="stat-number"><?php echo $miembros; ?></span><span class="stat-label">miembros</span></li>
+                            <li><span class="stat-number"><?php echo $eventos; ?></span><span class="stat-label">eventos</span></li>
+                            <li><span class="stat-number"><?php echo $avistamientos; ?></span><span class="stat-label">avistamientos</span></li>
+                        </ul>
+
+                        <!-- (opcional) Botones para CRUD (los activamos cuando tengas las rutas listas) -->
+                        <!--
+                        <div class="community-actions">
+                            <a class="btn btn--ghost" href="index.php?action=edit&id=<?php echo $id; ?>">Editar</a>
+                            <a class="btn btn--danger" href="index.php?action=delete&id=<?php echo $id; ?>" onclick="return confirm('¿Eliminar esta comunidad?')">Eliminar</a>
                         </div>
-                    </article>
-                    <article class="community-card">
-                        <figure class="community-thumb">
-                            <img src="Vistas/img/comunidad-huerto.jpg"
-                                alt="Personas trabajando en un huerto comunitario">
-                        </figure>
-                        <div class="community-body">
-                            <h3 class="community-name">Huerto Barrio Norte</h3>
-                            <p class="community-description">
-                                Familias del barrio se organizan para cuidar un huerto urbano,
-                                promover compostaje y compartir cosechas.
-                            </p>
-                            <ul class="community-stats">
-                                <li><span class="stat-number">32</span><span class="stat-label">miembros</span></li>
-                                <li><span class="stat-number">8</span><span class="stat-label">eventos</span></li>
-                                <li><span class="stat-number">15</span><span class="stat-label">avistamientos</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="community-card">
-                        <figure class="community-thumb">
-                            <img src="Vistas/img/comunidad-escuela.jpg"
-                                alt="Estudiantes participando en actividad ecológica">
-                        </figure>
-                        <div class="community-body">
-                            <h3 class="community-name">Red de Escuelas Verdes</h3>
-                            <p class="community-description">
-                                Estudiantes y docentes registran fauna local, diseñan actividades y conectan proyectos
-                                ambientales entre colegios.
-                            </p>
-                            <ul class="community-stats">
-                                <li><span class="stat-number">18</span><span class="stat-label">comunidades</span></li>
-                                <li><span class="stat-number">25</span><span class="stat-label">eventos</span></li>
-                                <li><span class="stat-number">60+</span><span class="stat-label">avistamientos</span>
-                                </li>
-                            </ul>
+                        -->
                         </div>
                     </article>
 
+                    <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No hay comunidades registradas aún.</p>
+                    <?php endif; ?>
                 </div>
+                 
                 <div class="community-metrics">
                     <div class="metric-pill">
                         <span class="metric-number">20+</span>
