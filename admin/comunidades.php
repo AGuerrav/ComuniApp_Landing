@@ -20,7 +20,7 @@ $err = $_GET["err"] ?? "";
     body{font-family:system-ui, Arial; margin:24px; background:#f6f7fb;}
     .wrap{max-width:1100px; margin:0 auto;}
     .grid{display:grid; grid-template-columns: 1fr 1fr; gap:18px;}
-    .card{background:white; border-radius:14px; padding:16px; box-shadow:0 10px 30px rgba(0,0,0,.06);}
+    .card{background:white; border-radius:14px; padding:40px; box-shadow:0 10px 30px rgba(0,0,0,.06);}
     h1{margin:0 0 10px;}
     label{display:block; font-size:14px; margin-top:10px;}
     input, textarea{width:100%; padding:10px; border-radius:10px; border:1px solid #d7d9e3;}
