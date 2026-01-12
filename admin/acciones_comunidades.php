@@ -28,7 +28,7 @@ try {
         $data = [
             "nombre" => post_str("nombre", 80),
             "descripcion" => post_str("descripcion", 600),
-            "imagen" => trim($_POST["imagen"] ?? ""), // puede ser vacío si quieres
+            "imagen" => post_str("imagen", 255),
             "miembros" => post_int("miembros", 0, 999999),
             "eventos" => post_int("eventos", 0, 999999),
             "avistamientos" => post_int("avistamientos", 0, 999999),
@@ -43,7 +43,7 @@ try {
         $data = [
             "nombre" => post_str("nombre", 80),
             "descripcion" => post_str("descripcion", 600),
-            "imagen" => trim($_POST["imagen"] ?? ""),
+            "imagen" => post_str("imagen", 255),
             "miembros" => post_int("miembros", 0, 999999),
             "eventos" => post_int("eventos", 0, 999999),
             "avistamientos" => post_int("avistamientos", 0, 999999),

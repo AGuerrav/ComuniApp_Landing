@@ -26,7 +26,7 @@
 
                         if (empty($imgRel)) {
                             // fallback a una imagen existente
-                            $imgSrc = 'Vistas/img/comunidad-playa.jpg';
+                            $imgSrc = 'Vistas/img/comunidades/playa.jpg';
                         } elseif (preg_match('#^(https?:)?//#i', $imgRel) || strpos($imgRel, 'data:') === 0) {
                             // URL absoluta o data URI
                             $imgSrc = $imgRel;
@@ -34,8 +34,8 @@
                             // ya contiene 'Vistas/' al inicio
                             $imgSrc = $imgRel;
                         } else {
-                            // rutas relativas como 'img/archivo.jpg' -> prefix 'Vistas/'
-                            $imgSrc = 'Vistas/' . ltrim($imgRel, '/');
+                            // rutas relativas como 'img/comunidades/archivo.jpg' -> prefix 'Vistas/'
+                            $imgSrc = 'Vistas/img/' . ltrim($imgRel, '/');
                         }
 
                         $miembros = (int)($c['miembros'] ?? 0);

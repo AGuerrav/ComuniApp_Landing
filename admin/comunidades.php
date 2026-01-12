@@ -66,9 +66,28 @@ $err = $_GET["err"] ?? "";
         <label>Descripción</label>
         <textarea name="descripcion" maxlength="600" required><?= htmlspecialchars($editRow["descripcion"] ?? "") ?></textarea>
 
-        <label>Imagen (ruta relativa, ej: Vistas/img/comunidad-playa.jpg)</label>
-        <input name="imagen" maxlength="255"
-               value="<?= htmlspecialchars($editRow["imagen"] ?? "") ?>"/>
+        <?php
+        $imgDir = __DIR__ . "/../Vistas/img/comunidades";
+        $imgFiles = [];
+        if (is_dir($imgDir)) {
+            foreach (scandir($imgDir) as $f) {
+                if ($f === '.' || $f === '..') continue;
+                if (is_file($imgDir . '/' . $f)) $imgFiles[] = $f;
+            }
+        }
+        ?>
+        <label>Imagen</label>
+        <?php $hasImage = isset($editRow["imagen"]) && $editRow["imagen"] !== ''; ?>
+        <select name="imagen" required>
+          <option value="" disabled <?= $hasImage ? '' : 'selected' ?>>Selecciona una...</option>
+          <?php foreach ($imgFiles as $f):
+            $val = 'comunidades/' . $f;
+            $sel = ($hasImage && $editRow["imagen"] === $val) ? 'selected' : '';
+          ?>
+            <option value="<?= htmlspecialchars($val) ?>" <?= $sel ?>><?= htmlspecialchars($f) ?></option>
+          <?php endforeach; ?>
+        </select>
+          
 
         <div class="row">
           <div>
@@ -132,7 +151,7 @@ $err = $_GET["err"] ?? "";
         </tbody>
       </table>
       <p style="color:#666; margin-top:12px;">
-        Tip: esta URL no está enlazada desde el menú público.
+        Nota: esta URL no está enlazada desde el menú público.
       </p>
     </div>
   </div>
