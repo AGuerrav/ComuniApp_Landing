@@ -96,18 +96,7 @@
   animation: scaleIn 0.3s ease-out;
 }
 
-/* Mejorar transición de reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* NOTE: `.reveal` styles moved to reveal.css to avoid duplication */
 
 /* Animación sutil para imágenes */
 img {

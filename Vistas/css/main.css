@@ -32,6 +32,11 @@
   background: linear-gradient(180deg, var(--aqua), var(--mint));
 }
 
+/* Compensar la navegación fija para evitar solapamiento */
+main {
+  padding-top: var(--nav-height);
+}
+
 .lead {
   font-weight: 600;
   margin-top: 0;
